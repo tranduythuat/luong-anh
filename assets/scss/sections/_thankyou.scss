@@ -1,0 +1,67 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.thankyou {
+    width: 100%;
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 454;
+        background: url('../../assets/images/thankyou-bg.png') no-repeat top / cover;
+        color: #f4f0e5ff;
+        @include flex-center;
+        flex-direction: column;
+
+        h2.title { 
+            font-family: $pinyonScript-font;
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 9%
+        }
+
+        .divider {
+            max-width: 26px;
+            width: 100%;
+            margin-bottom: 5%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            text-align: justify;
+            text-align-last: center;
+            letter-spacing: .8px;
+            margin: 0 7% 4%;
+        }
+
+        p.couple-names {
+            font-family: $pinyonScript-font;
+            font-size: 22px;
+        }
+
+        .divider:nth-of-type(2) {
+            transform: rotate(180deg);
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            h2.title {
+                font-size: calc((32 / 500) * 100vw);
+            }
+
+            .divider {
+                max-width: calc((26 / 500) * 100vw);
+            }
+    
+            p {
+                letter-spacing: calc((.8 / 500) * 100vw);
+            }
+    
+            p.couple-names {
+                font-size: calc((22 / 500) * 100vw);
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @font-face {
   font-family: "SVN-Gotham";
-  src: url("../../assets/fonts/SVN-GothamBook.woff2") format("woff2"), url("../fonts/SVN-GothamBook.woff") format("woff");
+  src: url("../../assets/fonts/SVN-GothamBook.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBook.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +13,19 @@
 }
 @font-face {
   font-family: "1FTVBlushingRose";
-  src: url("../../assets/fonts/1FTVBlushingRose.woff2") format("woff2"), url("../fonts/1FTVBlushingRose.woff") format("woff");
+  src: url("../../assets/fonts/1FTVBlushingRose.woff2") format("woff2"), url("../../assets/fonts/1FTVBlushingRose.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lora";
+  src: url("../../assets/fonts/Lora-Regular.woff2") format("woff2"), url("../../assets/fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PinyonScript";
+  src: url("../../assets/fonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/fonts/PinyonScript-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +36,7 @@
 }
 
 body {
-  font-size: 12.65px;
+  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +57,7 @@ section {
   height: 100%;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  background-color: #e8e6d9;
+  background-color: #f4f0e5;
 }
 
 .music-block {
@@ -76,7 +89,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 105px;
-  color: white;
+  color: #f4f0e5;
 }
 .music-block .music-label label {
   font-family: "1FTVBlushingRose", sans-serif;
@@ -84,11 +97,11 @@ section {
   cursor: pointer;
   width: 100%;
   padding: 6% 0 5% 15%;
-  background-color: rgba(112, 104, 81, 0.7803921569);
+  background-color: #b18183;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   transform: translateX(25%);
-  border: 1px solid white;
+  border: 1px solid #f4f0e5;
 }
 
 .spin {
@@ -106,7 +119,7 @@ section {
 }
 @media (max-width: 500px) {
   body {
-    font-size: 2.53vw;
+    font-size: 2.4vw;
   }
   .music-block .player {
     max-width: 11vw;
@@ -154,13 +167,6 @@ header {
   transform: rotateY(0deg);
 }
 
-.timeline {
-  height: 200px;
-  width: 100%;
-  background-color: antiquewhite;
-  display: flex;
-}
-
 .box {
   width: 100px;
   height: 100px;
@@ -183,7 +189,7 @@ header {
 .hero {
   width: 100%;
   aspect-ratio: 500/824;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 196, 145, 0.259)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tien-anh/resized/DSCF6656.webp") no-repeat 0% 100%/cover;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.394), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #f4f0e5), url("../../assets/images/couple-01.png") no-repeat 0% 100%/cover;
 }
 .hero .content {
   width: 100%;
@@ -191,136 +197,314 @@ header {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  color: white;
+  color: #767a4d;
   font-family: "1FTVBlushingRose", sans-serif;
+  padding-bottom: 6%;
 }
-.hero .content p.date-range {
-  font-size: 44px;
-  letter-spacing: 5px;
-  margin-bottom: 4%;
+.hero .content h2.name {
+  font-family: "PinyonScript", sans-serif;
+  font-weight: 300;
+  font-size: 64px;
 }
-.hero .content p.couple-names {
-  font-size: 18px;
-  margin-bottom: 5%;
-  text-transform: uppercase;
-}
-.hero .content .invited-text {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 2px;
-  margin-bottom: 40%;
+.hero .content .divider-and {
+  font-family: "PinyonScript", sans-serif;
+  font-weight: 300;
+  font-size: 27px;
 }
 @media (max-width: 500px) {
-  .hero .content p.date-range {
-    font-size: 8.8vw;
-    letter-spacing: 1vw;
+  .hero .content h2.name {
+    font-size: 12.8vw;
   }
-  .hero .content p.couple-names {
-    font-size: 3.6vw;
-  }
-  .hero .content .invited-text {
-    font-size: 2.4vw;
-    letter-spacing: 0.4vw;
+  .hero .content .divider-and {
+    font-size: 5.4vw;
   }
 }
 
+.invitation {
+  width: 100%;
+}
 .invitation .content {
-  font-family: "1FTVBlushingRose", sans-serif;
   width: 100%;
-  font-weight: 300;
+  color: #767a4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 0.8px;
+  padding-top: 17%;
+  padding-bottom: 20%;
 }
-.invitation .content .text-box {
-  padding: 10% 10% 20%;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.3;
-}
-.invitation .content .text-box .initials h2 {
-  font-size: 70px;
-}
-.invitation .content .text-box .initials h2 span {
-  font-size: 30px;
-}
-.invitation .content .text-box .family-info {
-  margin-top: 15%;
-}
-.invitation .content .text-box .family-info p {
-  font-size: 11px;
-}
-.invitation .content .text-box .family-info p.en {
-  margin-top: 4%;
-}
-.invitation .content .text-box .invitation-text {
-  margin-top: 5%;
-}
-.invitation .content .text-box .invitation-text p {
-  font-size: 11px;
-}
-.invitation .content .text-box .invitation-text p.en {
-  margin-top: 4%;
-  margin-bottom: 15%;
-}
-.invitation .content .text-box .couple-info {
+.invitation .content .invite-header .invite-top-text {
   text-transform: uppercase;
-  margin-top: 10%;
+  color: #b18183;
+  font-weight: 600;
 }
-.invitation .content .text-box .couple-info h2 {
-  font-size: 26px;
-  font-weight: 300;
-  letter-spacing: 2px;
+.invitation .content .invite-header .invite-sub-text {
+  letter-spacing: 0.8px;
+  line-height: 1.5;
 }
-.invitation .content .text-box .couple-info p.role {
-  font-size: 11px;
-}
-.invitation .content .text-box .couple-info p.divider {
-  margin-bottom: 10%;
-}
-.invitation .content .image-box {
-  padding: 10%;
+.invitation .content .invite-image {
+  max-width: 358px;
   width: 100%;
-  aspect-ratio: 500/812;
-  background: linear-gradient(to bottom, #e8e6d9, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tien-anh/resized/DSCF7803.webp") no-repeat 48% 100%/cover;
+  margin-top: 6%;
 }
-.invitation .content .image-box h2 {
-  font-family: "1FTVBlushingRose", sans-serif;
-  font-size: 18px;
-  font-weight: 100;
-  text-align: left;
-  line-height: 1.3;
+.invitation .content .invite-image img {
+  width: 100%;
+  height: auto;
 }
-.invitation .content .image-box h2 span {
-  text-transform: capitalize;
-  font-style: italic;
-  font-size: 35px;
+.invitation .content .title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 32px;
+  margin-top: 7%;
+}
+.invitation .content .divider {
+  margin: 6% 0;
+}
+.invitation .content .wedding-date {
+  font-size: 22px;
+  color: #b18183;
+  letter-spacing: 1.5px;
+}
+.invitation .content .venue .venue-title {
+  text-transform: uppercase;
+  color: #b18183;
+}
+.invitation .content .venue .venue-name {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 34px;
+  color: #b18183;
+  line-height: 1.5;
 }
 @media (max-width: 500px) {
-  .invitation .content .text-box {
-    letter-spacing: 0.2vw;
+  .invitation .content {
+    letter-spacing: 0.16vw;
   }
-  .invitation .content .text-box .initials h2 {
-    font-size: 14vw;
+  .invitation .content .invite-header .invite-sub-text {
+    letter-spacing: 0.16vw;
   }
-  .invitation .content .text-box .initials h2 span {
-    font-size: 6vw;
+  .invitation .content .invite-image {
+    max-width: 71.6vw;
   }
-  .invitation .content .text-box .family-info p {
-    font-size: 2.2vw;
+  .invitation .content .title {
+    font-size: 6.4vw;
   }
-  .invitation .content .text-box .invitation-text p {
-    font-size: 2.2vw;
+  .invitation .content .wedding-date {
+    font-size: 4.4vw;
+    letter-spacing: 0.3vw;
   }
-  .invitation .content .text-box .couple-info h2 {
-    font-size: 5.2vw;
-    letter-spacing: 0.4vw;
+  .invitation .content .venue .venue-name {
+    font-size: 6.8vw;
   }
-  .invitation .content .text-box .couple-info p.role {
-    font-size: 2.2vw;
+}
+
+.timeline {
+  width: 100%;
+}
+.timeline .content {
+  width: 100%;
+  aspect-ratio: 500/332;
+  background: url("../../assets/images/timeline-bg.png") no-repeat top/cover;
+  position: relative;
+  color: #f4f0e5;
+}
+.timeline .content .wax-img {
+  max-width: 94px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -12%;
+  transform: translateX(-50%);
+}
+.timeline .content h2.title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 17%;
+}
+.timeline .content .timeline-items-nhagai {
+  margin-top: 7%;
+}
+.timeline .content .timeline-items-nhagai .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline .content .timeline-items-nhagai .item .icon {
+  max-width: 28px;
+  width: 100%;
+}
+.timeline .content .timeline-items-nhagai .item .icon img {
+  width: 100%;
+  height: auto;
+}
+.timeline .content .timeline-items-nhagai .item:first-child {
+  margin-bottom: 11%;
+}
+.timeline .content .timeline-items-nhagai .item:first-child .icon {
+  max-width: 20px;
+}
+.timeline .content .timeline-items-nhatrai {
+  margin-top: 7%;
+}
+.timeline .content .timeline-items-nhatrai .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline .content .timeline-items-nhatrai .item .icon {
+  max-width: 28px;
+  width: 100%;
+}
+.timeline .content .timeline-items-nhatrai .item .icon img {
+  width: 100%;
+  height: auto;
+}
+.timeline .content .timeline-items-nhatrai .item:nth-child(1),
+.timeline .content .timeline-items-nhatrai .item:nth-child(2) {
+  margin-bottom: 5%;
+}
+.timeline .content .timeline-items-nhatrai .item:nth-child(1) .icon,
+.timeline .content .timeline-items-nhatrai .item:nth-child(3) .icon {
+  max-width: 20px;
+}
+.timeline .couple-img {
+  width: 100%;
+  aspect-ratio: 500/781;
+  overflow: hidden;
+}
+.timeline .couple-img img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .timeline .content .wax-img {
+    max-width: 18.8vw;
   }
-  .invitation .content .image-box h2 {
-    font-size: 2.8vw;
+  .timeline .content h2.title {
+    font-size: 6.4vw;
   }
-  .invitation .content .image-box h2 span {
-    font-size: 7vw;
+  .timeline .content .timeline-items-nhagai .item .icon {
+    max-width: 5.6vw;
+  }
+  .timeline .content .timeline-items-nhagai .item:first-child .icon {
+    max-width: 4vw;
+  }
+  .timeline .content .timeline-items-nhatrai .item .icon {
+    max-width: 5.6vw;
+  }
+  .timeline .content .timeline-items-nhatrai .item:nth-child(1) .icon,
+  .timeline .content .timeline-items-nhatrai .item:nth-child(3) .icon {
+    max-width: 4vw;
+  }
+}
+
+.thankyou {
+  width: 100%;
+}
+.thankyou .content {
+  width: 100%;
+  aspect-ratio: 500/454;
+  background: url("../../assets/images/thankyou-bg.png") no-repeat top/cover;
+  color: #f4f0e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.thankyou .content h2.title {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 9%;
+}
+.thankyou .content .divider {
+  max-width: 26px;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.thankyou .content .divider img {
+  width: 100%;
+  height: auto;
+}
+.thankyou .content p {
+  text-align: justify;
+  text-align-last: center;
+  letter-spacing: 0.8px;
+  margin: 0 7% 4%;
+}
+.thankyou .content p.couple-names {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 22px;
+}
+.thankyou .content .divider:nth-of-type(2) {
+  transform: rotate(180deg);
+}
+@media (max-width: 500px) {
+  .thankyou .content h2.title {
+    font-size: 6.4vw;
+  }
+  .thankyou .content .divider {
+    max-width: 5.2vw;
+  }
+  .thankyou .content p {
+    letter-spacing: 0.16vw;
+  }
+  .thankyou .content p.couple-names {
+    font-size: 4.4vw;
+  }
+}
+
+.album {
+  width: 100%;
+}
+.album .content {
+  width: 100%;
+  aspect-ratio: 500/760;
+  padding-bottom: 10%;
+}
+.album .content .swiper {
+  width: 100%;
+  height: 100%;
+  overflow: unset;
+}
+.album .content .swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.album .content .swiper .swiper-button-next,
+.album .content .swiper .swiper-button-prev {
+  color: white;
+}
+.album .content .swiper .swiper-pagination-bullet {
+  max-width: 16px;
+  height: unset;
+  aspect-ratio: 16/16;
+  width: 100%;
+  z-index: 9999;
+}
+.album .content .swiper .swiper-pagination-bullet-active {
+  background: #625f40;
+}
+.album .content .swiper .swiper-horizontal > .swiper-pagination-bullets,
+.album .content .swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.album .content .swiper .swiper-pagination-custom,
+.album .content .swiper .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, -6%);
+}
+.album .content .swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.album .content .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 1.3%;
+}
+@media (max-width: 500px) {
+  .album .content .swiper .swiper-button-next:after,
+  .album .content .swiper .swiper-button-prev:after {
+    font-size: 8.8vw;
+  }
+  .album .content .swiper .swiper-pagination-bullet {
+    max-width: 3.2vw;
   }
 }
 
@@ -436,59 +620,53 @@ header {
 }
 .rsvp .content {
   width: 100%;
-  font-family: "1FTVBlushingRose", sans-serif;
-  font-weight: 100;
-  line-height: 1.2;
-  padding: 10% 10% 5%;
-  text-align: left;
-}
-.rsvp .content .top-img {
-  width: 100%;
-  aspect-ratio: 386/216;
-  margin: 0 auto;
-}
-.rsvp .content .top-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 100% 70%;
+  color: #767a4d;
+  padding: 10% 0;
 }
 .rsvp .content .header {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: start;
-  margin: 8% 0 15%;
+  padding: 0 8%;
 }
-.rsvp .content .header .main-heading, .rsvp .content .header .english-heading {
-  font-size: 25px;
-  font-weight: 100;
-  text-align: left;
+.rsvp .content .header h2.title {
+  font-family: "PinyonScript", sans-serif;
+  color: #b18183;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 6%;
 }
-.rsvp .content .info-notice {
-  margin-bottom: 10%;
+.rsvp .content .header .subtext {
+  letter-spacing: 0.6px;
+  font-size: 12.22px;
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: center;
 }
-.rsvp .content .info-notice p {
-  text-align: left;
+.rsvp .content hr {
+  border-top: 2px solid #b18183;
+  background: #b18183;
+  margin: 5% 8%;
 }
-.rsvp .content .info-notice p.vi {
-  margin-bottom: 3%;
+.rsvp .content form {
+  padding: 0 8%;
 }
 .rsvp .content form .form-group {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 .rsvp .content form .form-group input[type=text],
 .rsvp .content form .form-group input[type=number],
 .rsvp .content form .form-group textarea {
-  font-family: "SVN-Gotham", sans-serif;
   width: 100%;
-  padding: 2% 4%;
-  border: 2px solid #000;
+  padding: 2% 3%;
+  border: 2px solid #b18183;
   border-radius: 15px;
-  background: white;
-  font-size: 9.11px;
-  color: #000;
+  background: transparent;
+  font-size: 9.46px;
+  color: #767a4d;
   transition: border-color 0.3s ease;
+}
+.rsvp .content form .form-group input[type=text]::placeholder,
+.rsvp .content form .form-group input[type=number]::placeholder,
+.rsvp .content form .form-group textarea::placeholder {
+  color: #767a4d;
 }
 .rsvp .content form .form-group input[type=text]:focus,
 .rsvp .content form .form-group input[type=number]:focus,
@@ -505,9 +683,9 @@ header {
 }
 .rsvp .content form .form-group .attendance-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 7%;
-  margin: 3% 0 5%;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin: 9% 0 2%;
 }
 .rsvp .content form .form-group .attendance-buttons .radio-wrapper {
   position: relative;
@@ -518,67 +696,82 @@ header {
   cursor: pointer;
 }
 .rsvp .content form .form-group .attendance-buttons .radio-label {
-  font-family: "SVN-GothamLight", sans-serif;
+  width: 100%;
+  height: 100%;
+  font-size: 12.36px;
   display: block;
-  padding: 3%;
-  border: 2px solid #000;
+  padding: 1%;
+  border: 2px solid #b18183;
   border-radius: 15px;
-  background: white;
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  text-align: center;
   line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .rsvp .content form .form-group .attendance-buttons .radio-label:hover {
-  background: #ded1c3;
+  background: #b18183;
+  color: #f4f0e5;
+  border: 2px solid #b18183;
 }
 .rsvp .content form .form-group .attendance-buttons .radio-wrapper input[type=radio]:checked + .radio-label {
-  background: #838484;
-  border: 2px solid #838484;
-  color: white;
+  background: #b18183;
+  border: 2px solid #b18183;
+  color: #f4f0e5;
 }
 .rsvp .content form .form-group .dietary-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .rsvp .content form .submit-btn {
-  width: 38%;
+  font-family: "Lora", sans-serif;
+  width: 45%;
   padding: 2%;
-  background: #838484;
-  color: #000;
+  background: #b18183;
+  color: #f4f0e5;
   border: none;
   border-radius: 15px;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 100;
+  font-size: 16.68px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: background 0.3s ease;
   margin-bottom: 10%;
+  margin-top: 8%;
 }
 .rsvp .content form .submit-btn:hover {
-  background: rgb(90, 91, 91);
+  background: rgb(181, 89, 92);
   opacity: 0.9;
 }
 .rsvp .content form .submit-btn:active {
   transform: scale(0.98);
 }
 @media (max-width: 500px) {
-  .rsvp .content .header .main-heading, .rsvp .content .header .english-heading {
-    font-size: 5vw;
+  .rsvp .content .header h2.title {
+    font-size: 6.4vw;
+  }
+  .rsvp .content .header .subtext {
+    letter-spacing: 0.12vw;
+    font-size: 2.444vw;
   }
   .rsvp .content form .form-group input[type=text],
   .rsvp .content form .form-group input[type=number],
   .rsvp .content form .form-group textarea {
-    font-size: 1.822vw;
+    font-size: 1.892vw;
   }
   .rsvp .content form .form-group textarea {
     font-size: 1.832vw;
     letter-spacing: 0.1vw;
   }
+  .rsvp .content form .form-group .attendance-buttons .radio-label {
+    font-size: 2.472vw;
+  }
   .rsvp .content form .submit-btn {
-    font-size: 2.4vw;
+    font-size: 3.336vw;
     letter-spacing: 0.2vw;
   }
 }
@@ -612,25 +805,14 @@ div:where(.swal2-container) img:where(.swal2-image) {
 
 .end {
   width: 100%;
-  aspect-ratio: 500/1100;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tien-anh/resized/DSCF8755.webp") no-repeat 48% 100%/cover;
   justify-content: end;
 }
 .end .content {
+  aspect-ratio: 500/300;
+  background: url("../../assets/images/couple-05.png") no-repeat center/cover;
   width: 100%;
   font-family: "1FTVBlushingRose", sans-serif;
   position: relative;
-}
-.end .content p {
-  font-size: 17.5px;
-  text-transform: uppercase;
-  margin-bottom: 5%;
-  color: white;
-}
-@media (max-width: 500px) {
-  .end .content p {
-    font-size: 3.5vw;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

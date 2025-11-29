@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "SVN-Gotham";
+  src: url("../../assets/fonts/SVN-GothamBook.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLight";
+  src: url("../../assets/fonts/SVN-Gotham Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "1FTVBlushingRose";
+  src: url("../../assets/fonts/1FTVBlushingRose.woff2") format("woff2"), url("../../assets/fonts/1FTVBlushingRose.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lora";
+  src: url("../../assets/fonts/Lora-Regular.woff2") format("woff2"), url("../../assets/fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PinyonScript";
+  src: url("../../assets/fonts/PinyonScript-Regular.woff2") format("woff2"), url("../../assets/fonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,27 +35,64 @@
 }
 
 body {
-  font-size: 12.65px;
+  font-size: 12px;
+  background-color: #e8e6d9;
+  font-family: "Lora", sans-serif;
+  color: #f4f0e5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media (max-width: 500px) {
+  body {
+    font-size: 2.4vw;
+  }
+}
 .container {
   max-width: 500px;
   width: 100%;
   height: 100vh;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  background-color: #e8e6d9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .container .content {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   width: 100%;
   aspect-ratio: 500/890;
   background: url("../../assets/images/letter.png") no-repeat center/contain;
+  text-align: center;
+}
+.container .content .top-text {
+  margin-top: 35%;
+}
+.container .content .top-text::after, .container .content .top-text::before {
+  content: ".";
+  font-size: 25px;
+  position: relative;
+  padding: 2%;
+  bottom: 1px;
+}
+.container .content .couple-names {
+  margin-top: 10%;
+}
+.container .content .couple-names h2 {
+  font-family: "PinyonScript", sans-serif;
+  font-size: 68px;
+  font-weight: 300;
+}
+.container .content .date {
+  margin-top: 72%;
+}
+.container .content .subtext {
+  margin-top: 3%;
+}
+@media (max-width: 500px) {
+  .container .content .couple-names h2 {
+    font-size: 13.6vw;
+  }
 }
 
 /*# sourceMappingURL=opening.css.map */

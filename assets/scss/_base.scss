@@ -58,18 +58,18 @@ section {
     .music-label {
         @include flex-center;
         width: 105px;
-        color: white;
+        color: #f4f0e5ff;
         label {
             font-family: $blushing-rose-font;
             font-size: 11px;
             cursor: pointer;
             width: 100%;
             padding: 6% 0 5% 15%;
-            background-color: #706851c7;
+            background-color: $pink-color;
             border-top-left-radius: 25px;
             border-bottom-left-radius:25px;
             transform: translateX(25%);
-            border: 1px solid white;
+            border: 1px solid #f4f0e5ff;
         }
     }
 }

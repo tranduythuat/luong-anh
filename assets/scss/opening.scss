@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "fonts";
 @use "mixins" as *;
 
 * {
@@ -9,7 +10,16 @@
 
 body {
     font-size: $font-size-base;
+    background-color: $bg-color;
+    font-family: $lora-font;
+    color: #f4f0e5ff;
     @include flex-center;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: calc((12 / 500) * 100vw);
+    }
 }
 
 .container {
@@ -17,14 +27,51 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    // overflow-x: hidden;
-    box-shadow: $shadow-default;
-    background-color: $bg-color;
     @include flex-center;
     
     .content {
+        box-shadow: $shadow-default;
         width: 100%;
         aspect-ratio: 500 / 890;
         background: url('../../assets/images/letter.png') no-repeat center / contain;
+        text-align: center;
+
+        .top-text {
+            margin-top: 35%;
+            &::after,&::before {
+                content: '.';
+                font-size: 25px;
+                position: relative;
+                padding: 2%;
+                bottom: 1px;
+            }
+        }
+
+        .couple-names {
+            margin-top: 10%;
+            h2 {
+                font-family: $pinyonScript-font;
+                font-size:68px;
+                font-weight: 300;
+            }
+        }
+
+        .date {
+            margin-top: 72%;
+        }
+
+        .subtext {
+            margin-top: 3%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .couple-names {
+                h2 {
+                    font-size: calc((68 / 500) * 100vw);
+                }
+            }
+        }
     }
 }
