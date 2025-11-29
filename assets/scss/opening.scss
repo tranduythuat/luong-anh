@@ -20,6 +20,7 @@ body {
     // overflow-x: hidden;
     box-shadow: $shadow-default;
     background-color: $bg-color;
+    @include flex-center;
     
     .content {
         width: 100%;
