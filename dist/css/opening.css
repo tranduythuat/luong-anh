@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12.65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background-color: #e8e6d9;
+}
+.container .content {
+  width: 100%;
+  aspect-ratio: 500/890;
+  background: url("../../assets/images/letter.png") no-repeat center/contain;
+}
+
+/*# sourceMappingURL=opening.css.map */
