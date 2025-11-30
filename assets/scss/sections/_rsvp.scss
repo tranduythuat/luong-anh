@@ -9,16 +9,16 @@
         color: $green-color;
         padding: 10% 0;
         .header {
-            padding: 0 8%;
+            padding: 0 7.5%;
             h2.title {
                 font-family: $pinyonScript-font;
                 color: $pink-color;
                 font-size: 32px;
                 font-weight: 300;
                 margin-bottom: 6%;
-            }
+            } 
             .subtext {
-                letter-spacing: .6px;
+                letter-spacing: .5px;
                 font-size: 12.22px;
                 line-height: 1.6;
                 text-align: justify;
@@ -159,7 +159,7 @@
                     font-size: calc((32 / 500) * 100vw);
                 }
                 .subtext {
-                    letter-spacing: calc((.6 / 500) * 100vw);
+                    letter-spacing: calc((.5 / 500) * 100vw);
                     font-size: calc((12.22 / 500) * 100vw);
                 }
             }
