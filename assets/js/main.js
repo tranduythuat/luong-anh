@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     pagination: {
       el: ".swiper-pagination",
+      dynamicBullets: true,
     },
     // thumbs: {
     //   swiper: thumbSwiper,
@@ -44,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     repeatDelay: 0,  // delay giữa các lần lặp
     defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
     scrollTrigger: {
-      trigger: ".box",
+      trigger: ".timeline-items",
       start: "top 90%", // khi phần tử xuất hiện 80% trong viewport
     }
   });
 
   // Thêm các animation theo thứ tự
-  tl.from(".red", { x: -100, opacity: 0 })        // box đỏ bay xuống
-    .from(".blue", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
-    .from(".green", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
+  tl.from(".first", { x: -100, opacity: 0 })        // box đỏ bay xuống
+    .from(".second", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
+    .from(".third", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
 
   async function toggleMusic(e) {
     console.log('togle')

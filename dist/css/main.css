@@ -162,11 +162,6 @@ header {
   transition: none;
 }
 
-.animate-flip.active {
-  opacity: 1;
-  transform: rotateY(0deg);
-}
-
 .box {
   width: 100px;
   height: 100px;
@@ -247,6 +242,7 @@ header {
   max-width: 358px;
   width: 100%;
   margin-top: 6%;
+  perspective: 1000px;
 }
 .invitation .content .invite-image img {
   width: 100%;
@@ -373,6 +369,7 @@ header {
   width: 100%;
   aspect-ratio: 500/781;
   overflow: hidden;
+  perspective: 1000px;
 }
 .timeline .couple-img img {
   width: 100%;

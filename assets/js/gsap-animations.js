@@ -16,6 +16,7 @@ function gsapFlipIn(selector) {
     });
   });
 }
+
 function gsapFadeIn(selector) {
   gsap.utils.toArray(selector).forEach((el) => {
     gsap.fromTo(
@@ -122,7 +123,7 @@ function gsapFlipVerticalLeft(selector) {
   gsap.utils.toArray(selector).forEach((el) => {
     gsap.from(el, {
       rotateY: -180,
-      scale: 0.8,
+      scale: 1,
       opacity: 0,
       duration: 2,
       ease: "back.out(1.2)",

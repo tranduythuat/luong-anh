@@ -28,6 +28,47 @@
   font-weight: normal;
   font-style: normal;
 }
+.image-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.image-wrapper img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.animate-flip {
+  transform-origin: left center;
+  transform: rotateY(-120deg) scale(0.9);
+  opacity: 0;
+  filter: brightness(0.6);
+  backface-visibility: hidden;
+  transition: none;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  border-radius: 12px;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.blue {
+  background: #3498db;
+}
+
+.green {
+  background: #2ecc71;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +95,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  perspective: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
