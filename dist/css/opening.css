@@ -104,7 +104,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   width: 100%;
   aspect-ratio: 500/890;
-  background: url("../../assets/images/letter.png") no-repeat center/contain;
+  background: url("../../assets/images/letter.webp") no-repeat center/contain;
   text-align: center;
   cursor: pointer;
 }
