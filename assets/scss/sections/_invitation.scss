@@ -27,12 +27,15 @@
         .invite-image {
             max-width: 358px;
             width: 100%;
+            aspect-ratio: 358 / 190;
             margin-top: 6%;
             perspective: 1000px;
             
             img {
                 width: 100%;
-                height: auto;
+                height: 100%;
+                object-fit: cover;
+                object-position: 100% 45%;
             }
         }
         .title {

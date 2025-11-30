@@ -184,7 +184,7 @@ header {
 .hero {
   width: 100%;
   aspect-ratio: 500/824;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.394), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #f4f0e5), url("../../assets/images/couple-01.png") no-repeat 0% 100%/cover;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.394), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #f4f0e5), url("../../assets/images/couple-01.png") no-repeat 100% 100%/cover;
 }
 .hero .content {
   width: 100%;
@@ -241,12 +241,15 @@ header {
 .invitation .content .invite-image {
   max-width: 358px;
   width: 100%;
+  aspect-ratio: 358/190;
   margin-top: 6%;
   perspective: 1000px;
 }
 .invitation .content .invite-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 45%;
 }
 .invitation .content .title {
   font-family: "PinyonScript", sans-serif;
@@ -806,7 +809,7 @@ div:where(.swal2-container) img:where(.swal2-image) {
 }
 .end .content {
   aspect-ratio: 500/300;
-  background: url("../../assets/images/couple-05.png") no-repeat center/cover;
+  background: url("../../assets/images/couple-05.png") no-repeat 100% 60%/cover;
   width: 100%;
   font-family: "1FTVBlushingRose", sans-serif;
   position: relative;
