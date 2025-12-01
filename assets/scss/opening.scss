@@ -41,12 +41,12 @@ body {
         position: relative;
 
         .hand-click{
-            max-width: 80px;
+            max-width: 40px;
             width: 100%;
             position: absolute;
             top: auto;
             left: 67%;
-            bottom: 23%;
+            bottom: 25%;
             // transform: rotate(-30deg);
         }
 
@@ -83,7 +83,7 @@ body {
     @media (max-width: 500px) {
         .content {
             .hand-click{
-                max-width: calc((80 / 500) * 100vw);
+                max-width: calc((40 / 500) * 100vw);
             }
             .couple-names {
                 h2 {
