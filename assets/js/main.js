@@ -148,7 +148,7 @@ async function handleFormSubmit(e, code) {
     // Thông báo thành công
     Swal.fire({
       title: "Thành công!",
-      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha",
+      text: "Cảm ơn mọi người đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha",
       icon: "success",
       confirmButtonText: "OK",
       confirmButtonColor: "#000",
