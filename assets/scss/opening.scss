@@ -41,6 +41,8 @@ body {
         position: relative;
 
         .hand-click{
+            max-width: 100px;
+            width: 100%;
             position: absolute;
             top: auto;
             left: 52%;
@@ -80,6 +82,9 @@ body {
 
     @media (max-width: 500px) {
         .content {
+            .hand-click{
+                max-width: calc((100 / 500) * 100vw);
+            }
             .couple-names {
                 h2 {
                     font-size: calc((68 / 500) * 100vw);
