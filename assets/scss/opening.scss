@@ -41,13 +41,13 @@ body {
         position: relative;
 
         .hand-click{
-            max-width: 100px;
+            max-width: 80px;
             width: 100%;
             position: absolute;
             top: auto;
-            left: 52%;
-            bottom: 14%;
-            transform: rotate(-30deg) scale(1.1);
+            left: 67%;
+            bottom: 23%;
+            // transform: rotate(-30deg);
         }
 
 
@@ -99,9 +99,9 @@ body {
 }
   
 @keyframes tap {
-    0% { transform: scale(1) rotate(-30deg) translateY(0); }
-    30% { transform: scale(0.92) rotate(-30deg) translateY(4px); }
-    60% { transform: scale(1) rotate(-30deg) translateY(0); }
-    100% { transform: scale(1) rotate(-30deg) translateY(0); }
-  }
+    0% { transform: scale(1) translateY(0); }
+    30% { transform: scale(0.92) translateY(4px); }
+    60% { transform: scale(1) translateY(0); }
+    100% { transform: scale(1) translateY(0); }
+}
   
