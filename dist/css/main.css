@@ -654,6 +654,7 @@ header {
 .rsvp .content form .form-group input[type=text],
 .rsvp .content form .form-group input[type=number],
 .rsvp .content form .form-group textarea {
+  font-family: "Lora", sans-serif;
   width: 100%;
   padding: 2% 3%;
   border: 2px solid #b18183;
