@@ -102,8 +102,8 @@ async function handleFormSubmit(e, code) {
 
   const {
     name: name,
-    attendance: attendance,
-    dietary: dietary,
+    confirm: confirm,
+    guest_number: guest_number,
     message: message,
   } = data;
   console.log("🚀 ~ handleFormSubmit 2~ data:", data);
@@ -120,8 +120,8 @@ async function handleFormSubmit(e, code) {
   });
 
   const urlObj = {
-    nhatrai: "?sheet=nha-trai",
-    nhagai: "?sheet=nha-gai"
+    nhatrai: "https://script.google.com/macros/s/AKfycbw4Xgxfnko2w7gPAhFQBIcWxE9K2rAWybfgVygC379ETi6S6_-u4Q6YZmhaALeHxipr/exec?sheet=nha-trai",
+    nhagai: "https://script.google.com/macros/s/AKfycbw4Xgxfnko2w7gPAhFQBIcWxE9K2rAWybfgVygC379ETi6S6_-u4Q6YZmhaALeHxipr/exec?sheet=nha-gai"
   }
 
   
@@ -134,8 +134,8 @@ async function handleFormSubmit(e, code) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({
         name,
-        attendance,
-        dietary,
+        confirm,
+        guest_number,
         message
       }),
     });
